@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Folha Tributária | Edição N.º 92 – Abril 2026</title>
+
+  <!-- Google Fonts: Sora (headings) + Source Serif 4 (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    /* =============================================
+       CSS VARIABLES — PALETA E TIPOGRAFIA
+       ============================================= */
+    :root {
+      --blue-deep:   #0a1f44;   /* fundo escuro principal */
+      --blue-mid:    #1246a0;   /* azul AGT */
+      --blue-light:  #1e5fcb;   /* azul interactivo */
+      --gold:        #f0a500;   /* acento dourado */
+      --green:       #17b26a;   /* ícones de checkmark */
+      --red-soft:    #e04a4a;   /* alertas / desafios */
+      --bg:          #f4f6fb;   /* fundo da página */
+      --surface:     #ffffff;
+      --surface-2:   #eef2fa;
+      --text-primary:#0d1b38;
+      --text-muted:  #5a6a85;
+      --border:      #dde3ef;
+      --radius-sm:   6px;
+      --radius-md:   12px;
+      --radius-lg:   20px;
+      --shadow-sm:   0 2px 8px rgba(10,31,68,.08);
+      --shadow-md:   0 6px 24px rgba(10,31,68,.12);
+      --font-head:   'Sora', sans-serif;
+      --font-body:   'Source Serif 4', serif;
+      --max-w:       680px;
+    }
+
+    /* =============================================
+       RESET GLOBAL
+       ============================================= */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; -webkit-text-size-adjust: 100%; }
+    body {
+      background: var(--bg);
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: var(--blue-light); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul { list-style: none; }
+
+    /* =============================================
+       WRAPPER — container central da newsletter
+       ============================================= */
+    .nl-wrapper {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      background: var(--surface);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* =============================================
+       SECÇÃO 1 — TOPO / CABEÇALHO
+       ============================================= */
+    .nl-topbar {
+      background: var(--blue-deep);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 28px;
+      font-family: var(--font-head);
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.65);
+    }
+    .nl-topbar span { color: #fff; }
+
+    /* =============================================
+       SECÇÃO 2 — HERO / BANNER PRINCIPAL
+       ============================================= */
+    .nl-hero {
+      background: linear-gradient(135deg, var(--blue-deep) 55%, var(--blue-mid) 100%);
+      padding: 56px 36px 52px;
+      position: relative;
+      overflow: hidden;
+    }
+    /* decoração geométrica de fundo */
+    .nl-hero::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(30,95,203,.35) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .nl-hero-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 40px;
+      padding: 5px 14px;
+      font-family: var(--font-head);
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .06em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+    .nl-hero-label span { font-size: 1em; }
+    .nl-hero h1 {
+      font-family: var(--font-head);
+      font-size: clamp(1.9rem, 5vw, 2.8rem);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      max-width: 480px;
+    }
+    .nl-hero p {
+      color: rgba(255,255,255,.78);
+      font-size: 1rem;
+      max-width: 420px;
+      margin-bottom: 32px;
+    }
+    .nl-hero-brand {
+      position: absolute;
+      top: 40px; right: 36px;
+      text-align: right;
+      color: rgba(255,255,255,.9);
+      font-family: var(--font-head);
+    }
+    .nl-hero-brand svg {
+      margin-left: auto;
+      margin-bottom: 6px;
+    }
+    .nl-hero-brand .brand-name {
+      font-size: 1.6rem;
+      font-weight: 800;
+      letter-spacing: .03em;
+      line-height: 1;
+    }
+    .nl-hero-brand .brand-sub {
+      font-size: .65rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.55);
+      line-height: 1.4;
+    }
+    /* Botão CTA */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gold);
+      color: var(--blue-deep);
+      font-family: var(--font-head);
+      font-size: .85rem;
+      font-weight: 700;
+      padding: 13px 26px;
+      border-radius: 40px;
+      transition: opacity .2s, transform .15s;
+    }
+    .btn-primary:hover { opacity: .88; transform: translateY(-1px); text-decoration: none; }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: transparent;
+      color: var(--blue-light);
+      border: 1.5px solid var(--blue-light);
+      font-family: var(--font-head);
+      font-size: .82rem;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 40px;
+      transition: background .2s, color .2s;
+    }
+    .btn-secondary:hover { background: var(--blue-light); color: #fff; text-decoration: none; }
+
+    /* =============================================
+       SECÇÃO 3 — DESTAQUES DO MÊS (4 cards)
+       ============================================= */
+    .nl-section {
+      padding: 40px 28px;
+    }
+    .nl-section + .nl-section {
+      border-top: 1px solid var(--border);
+    }
+    .nl-section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-head);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--blue-mid);
+      margin-bottom: 28px;
+    }
+    .nl-section-title::after {
+      content: '';
+      flex: 1;
+      height: 1.5px;
+      background: var(--border);
+    }
+
+    /* Grid de 4 cards — 2 colunas em mobile, 4 em desktop */
+    .destaques-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    @media (min-width: 540px) {
+      .destaques-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .destaque-card {
+      background: var(--surface-2);
+      border-radius: var(--radius-md);
+      padding: 20px 16px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      border: 1px solid var(--border);
+      transition: box-shadow .2s, transform .15s;
+    }
+    .destaque-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+    .destaque-icon {
+      width: 44px; height: 44px;
+      background: var(--blue-mid);
+      border-radius: var(--radius-sm);
+      display: flex; align-items: center; justify-content: center;
+      color: #fff;
+      font-size: 1.25rem;
+    }
+    .destaque-card h3 {
+      font-family: var(--font-head);
+      font-size: .88rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.3;
+    }
+    .destaque-card p {
+      font-size: .8rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      flex: 1;
+    }
+    .destaque-card a {
+      font-family: var(--font-head);
+      font-size: .75rem;
+      font-weight: 600;
+      color: var(--blue-light);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .destaque-card a:hover { text-decoration: underline; }
+
+    /* =============================================
+       SECÇÃO 4 — REPORTAGEM PRINCIPAL + REFORMA EM FOCO
+       lado-a-lado em desktop, empilhado em mobile
+       ============================================= */
+    .dual-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 0 28px 40px;
+    }
+    @media (min-width: 540px) {
+      .dual-row { grid-template-columns: 1fr 1fr; }
+    }
+
+    /* Card escuro — Reportagem Principal */
+    .report-card {
+      background: var(--blue-deep);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      position: relative;
+      overflow: hidden;
+    }
+    .report-card::after {
+      content: '';
+      position: absolute;
+      bottom: -40px; right: -40px;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(30,95,203,.3) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .badge {
+      display: inline-block;
+      font-family: var(--font-head);
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+    .badge-blue   { background: var(--blue-light); color: #fff; }
+    .badge-gold   { background: var(--gold);       color: var(--blue-deep); }
+    .badge-green  { background: var(--green);      color: #fff; }
+    .report-card h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.15rem, 3vw, 1.45rem);
+      font-weight: 800;
+      line-height: 1.2;
+      color: #fff;
+    }
+    .report-card p { font-size: .84rem; color: rgba(255,255,255,.75); }
+    .stat-number {
+      font-family: var(--font-head);
+      font-size: 3.4rem;
+      font-weight: 800;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .stat-label {
+      font-family: var(--font-head);
+      font-size: .72rem;
+      font-weight: 600;
+      color: rgba(255,255,255,.6);
+      text-transform: uppercase;
+      letter-spacing: .07em;
+    }
+    .stat-block {
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      margin: 4px 0;
+    }
+
+    /* Card claro — Reforma em Foco */
+    .reform-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .reform-card h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.15rem, 3vw, 1.4rem);
+      font-weight: 800;
+      color: var(--text-primary);
+      line-height: 1.2;
+    }
+    .reform-card .subtitle {
+      font-family: var(--font-head);
+      font-size: .88rem;
+      font-weight: 600;
+      color: var(--blue-mid);
+      margin-top: -8px;
+    }
+    .reform-card p { font-size: .84rem; color: var(--text-muted); }
+    .check-list { display: flex; flex-direction: column; gap: 10px; margin: 6px 0; }
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .84rem;
+      color: var(--text-primary);
+    }
+    .check-item::before {
+      content: '✓';
+      flex-shrink: 0;
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      background: var(--green);
+      color: #fff;
+      font-size: .7rem;
+      font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      margin-top: 1px;
+    }
+
+    /* =============================================
+       SECÇÃO 5 — TRÊS ARTIGOS (ASY5 / OPINIÃO / ANGOLA-RDC)
+       ============================================= */
+    .triple-row {
+      padding: 0 28px 40px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    @media (min-width: 480px) {
+      .triple-row { grid-template-columns: repeat(4, 1fr); }
+    }
+    .article-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 22px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: box-shadow .2s;
+    }
+    .article-card:hover { box-shadow: var(--shadow-md); }
+    .article-card .badge { align-self: flex-start; }
+    .article-card h3 {
+      font-family: var(--font-head);
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.25;
+    }
+    .article-card p { font-size: .8rem; color: var(--text-muted); flex: 1; }
+
+    /* Tabela ganhos/desafios dentro do card ASY5 */
+    .asy5-table {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      font-size: .78rem;
+    }
+    .asy5-col-title {
+      font-family: var(--font-head);
+      font-size: .72rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      letter-spacing: .04em;
+    }
+    .asy5-col-title.ganhos { color: var(--green); }
+    .asy5-col-title.desafios { color: var(--red-soft); }
+    .asy5-col li {
+      display: flex;
+      align-items: flex-start;
+      gap: 5px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+      line-height: 1.35;
+    }
+    .asy5-col li .ico { flex-shrink: 0; font-size: .75rem; }
+
+    /* Imagem bandeiras Angola-RDC */
+    .flag-img {
+      width: 100%;
+      border-radius: var(--radius-sm);
+      aspect-ratio: 16/7;
+      object-fit: cover;
+      background: linear-gradient(90deg, #cc0000 50%, #007fff 50%);
+      position: relative;
+      overflow: hidden;
+    }
+    /* Placeholder visual para as bandeiras */
+    .flag-placeholder {
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      display: flex;
+      height: 64px;
+    }
+    .flag-ao { flex: 1; background: linear-gradient(180deg, #cc0000 50%, #000 50%); }
+    .flag-rdc { flex: 1; background: linear-gradient(135deg, #009cde 33%, #f7d618 33%, #f7d618 66%, #ce1126 66%); }
+
+    /* =============================================
+       SECÇÃO 6 — SABIA QUE? + EDUCAÇÃO FINANCEIRA
+       ============================================= */
+    .info-row {
+      padding: 0 28px 40px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    @media (min-width: 480px) {
+      .info-row { grid-template-columns: 1fr 1fr; }
+    }
+    .info-card {
+      border-radius: var(--radius-md);
+      padding: 22px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .info-card.green-tint {
+      background: #edfaf4;
+      border: 1px solid #b2e8cf;
+    }
+    .info-card.gold-tint {
+      background: #fff9ee;
+      border: 1px solid #f5d98a;
+    }
+    .info-card-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-head);
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+    .info-card.green-tint .info-card-header { color: #14855a; }
+    .info-card.gold-tint  .info-card-header { color: #a06c00; }
+    .info-card h3 {
+      font-family: var(--font-head);
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.3;
+    }
+    .info-card p { font-size: .82rem; color: var(--text-muted); }
+
+    /* =============================================
+       SECÇÃO 7 — CTA SUBSCRIÇÃO
+       ============================================= */
+    .nl-subscribe {
+      background: var(--blue-deep);
+      padding: 40px 36px;
+      text-align: center;
+    }
+    .nl-subscribe h2 {
+      font-family: var(--font-head);
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .nl-subscribe p {
+      font-size: .86rem;
+      color: rgba(255,255,255,.65);
+      margin-bottom: 24px;
+    }
+    .subscribe-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 380px;
+      margin: 0 auto;
+    }
+    @media (min-width: 420px) {
+      .subscribe-form { flex-direction: row; }
+    }
+    .subscribe-input {
+      flex: 1;
+      padding: 12px 16px;
+      border-radius: 40px;
+      border: none;
+      font-family: var(--font-body);
+      font-size: .88rem;
+      outline: none;
+      color: var(--text-primary);
+    }
+    .subscribe-btn {
+      background: var(--gold);
+      color: var(--blue-deep);
+      border: none;
+      border-radius: 40px;
+      font-family: var(--font-head);
+      font-size: .85rem;
+      font-weight: 700;
+      padding: 12px 24px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: opacity .2s;
+    }
+    .subscribe-btn:hover { opacity: .88; }
+
+    /* =============================================
+       SECÇÃO 8 — RODAPÉ / FOOTER
+       ============================================= */
+    .nl-footer {
+      background: #060f24;
+      padding: 36px 28px 24px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+    @media (min-width: 480px) {
+      .nl-footer { grid-template-columns: 1fr 1fr 1fr 1fr; }
+    }
+    .footer-brand .brand-name {
+      font-family: var(--font-head);
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #fff;
+    }
+    .footer-brand .brand-sub {
+      font-size: .65rem;
+      font-weight: 600;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.4);
+    }
+    .footer-col-title {
+      font-family: var(--font-head);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.45);
+      margin-bottom: 12px;
+    }
+    .footer-col a, .footer-col p {
+      font-size: .8rem;
+      color: rgba(255,255,255,.65);
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      margin-bottom: 7px;
+      line-height: 1.4;
+    }
+    .footer-col a:hover { color: #fff; text-decoration: none; }
+    .footer-col a .fi { font-size: .8rem; opacity: .7; }
+    .social-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 4px;
+    }
+    .social-btn {
+      width: 34px; height: 34px;
+      border-radius: 8px;
+      background: rgba(255,255,255,.1);
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,.75);
+      font-size: .85rem;
+      transition: background .2s;
+    }
+    .social-btn:hover { background: var(--blue-mid); color: #fff; }
+    .nl-footer-bottom {
+      background: #060f24;
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding: 16px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      align-items: center;
+      text-align: center;
+    }
+    @media (min-width: 480px) {
+      .nl-footer-bottom { flex-direction: row; justify-content: space-between; }
+    }
+    .nl-footer-bottom p {
+      font-size: .73rem;
+      color: rgba(255,255,255,.35);
+    }
+
+    /* =============================================
+       UTILITÁRIOS
+       ============================================= */
+    .mt-auto { margin-top: auto; }
+    .divider  { height: 1px; background: var(--border); margin: 0 28px; }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     WRAPPER — envelope central da newsletter
+     ═══════════════════════════════════════════ -->
+<div class="nl-wrapper">
+
+  <!-- ════════════════════════════════
+       1. TOPBAR — marca e data
+       ════════════════════════════════ -->
+  <header class="nl-topbar">
+    <span>Folha Tributária | Edição N.º 92</span>
+    <span>Abril 2026</span>
+  </header>
+
+  <!-- ════════════════════════════════
+       2. HERO — manchete principal
+       ════════════════════════════════ -->
+  <section class="nl-hero">
+
+    <!-- Identificação da publicação -->
+    <div class="nl-hero-label">
+      <span>★</span> AGT e Grandes Contribuintes
+    </div>
+
+    <!-- Título e subtítulo -->
+    <h1>AGT e Grandes<br>Contribuintes<br>Impulsionam a<br>Modernização<br>Tributária</h1>
+    <p>Justinho, o Assistente Virtual da AGT via WhatsApp. As principais reformas, iniciativas e avanços da AGT resumidos numa leitura rápida.</p>
+
+    <!-- Botão de acção -->
+    <a class="btn-primary" href="https://drive.google.com/file/d/1NNCNbYxrJBBYJtTmGUED4JVtmZjMxXhx/view?usp=drive_link" target="_blank">Ler edição completa &rarr;</a>
+
+    <!-- Logótipo AGT (canto superior direito) -->
+    <div class="nl-hero-brand">
+      <!-- Ícone AGT simplificado em SVG -->
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="18" cy="18" r="17" stroke="rgba(255,255,255,.4)" stroke-width="1.5"/>
+        <path d="M18 6 L18 30 M6 18 L30 18 M9 9 L27 27 M27 9 L9 27" stroke="rgba(255,255,255,.7)" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="18" cy="18" r="4" fill="white" fill-opacity=".9"/>
+      </svg>
+      <div class="brand-name">AGT</div>
+      <div class="brand-sub">Administração Geral<br>Tributária</div>
+    </div>
+
+  </section>
+
+  <!-- ════════════════════════════════
+       3. DESTAQUES DO MÊS — 4 cards
+       ════════════════════════════════ -->
+  <section class="nl-section">
+    <div class="nl-section-title">
+      <span>✦</span> Destaques do Mês
+    </div>
+
+    <div class="destaques-grid">
+
+      <!-- Destaque 1: IA e fraude fiscal -->
+      <div class="destaque-card">
+        <div class="destaque-icon">🤖</div>
+        <h3>IA no combate à fraude fiscal</h3>
+        <p>AGT reforça uso de Inteligência Artificial para identificar irregularidades e apoiar auditorias com maior precisão.</p>
+        <a href="ia-combate-fraude.html">Saiba mais &rarr;</a>
+      </div>
+
+      <!-- Destaque 2: Grandes Contribuintes -->
+      <div class="destaque-card">
+        <div class="destaque-icon">👥</div>
+        <h3>Grandes Contribuintes ganham nova estrutura</h3>
+        <p>Lista passa de 422 para 633 contribuintes, reforçando o acompanhamento especializado e a arrecadação fiscal.</p>
+        <a href="grandes-contribuintes.html">Saiba mais &rarr;</a>
+      </div>
+
+      <!-- Destaque 3: ASY5 -->
+      <div class="destaque-card">
+        <div class="destaque-icon">🖥️</div>
+        <h3>ASY5 recebe avaliação máxima</h3>
+        <p>Nova plataforma aduaneira recebe nota 10 da CDOA e destaca-se pela digitalização, rapidez e transparência.</p>
+        <a href="asy5-bastonario.html">Saiba mais &rarr;</a>
+      </div>
+
+      <!-- Destaque 4: Angola-RDC -->
+      <div class="destaque-card">
+        <div class="destaque-icon">🤝</div>
+        <h3>Fórum Económico Angola–RDC</h3>
+        <p>AGT defende comércio transfronteiriço e formalização das trocas comerciais no 3.º Fórum Económico Angola–RDC, em Kinshasa.</p>
+        <a href="forum-rdc-angola.html">Saiba mais &rarr;</a>
+      </div>
+
+      <!-- Destaque 5: Fluxos Financeiros Ilícitos -->
+      <div class="destaque-card">
+        <div class="destaque-icon">🌍</div>
+        <h3>AGT no combate aos Fluxos Financeiros Ilícitos</h3>
+        <p>Angola participa na 5.ª Sessão da Subcomissão da União Africana sobre IFFs, em Abuja, reforçando o compromisso com a transparência fiscal.</p>
+        <a href="fluxos-financeiros-ilicitos.html">Saiba mais &rarr;</a>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ════════════════════════════════════════════════
+       4. REPORTAGEM PRINCIPAL + REFORMA EM FOCO
+       dois cards lado a lado (stack em mobile)
+       ════════════════════════════════════════════════ -->
+  <div class="dual-row">
+
+    <!-- 4a. Reportagem Principal — card escuro -->
+    <article class="report-card">
+      <span class="badge badge-blue">Reportagem Principal</span>
+      <h2>Grandes Contribuintes no centro da estratégia fiscal</h2>
+      <p>AGT reforça alinhamento com os contribuintes de maior relevância económica através de nova estrutura operacional, maior especialização e acompanhamento sectorial.</p>
+      <!-- Estatística em destaque -->
+      <div class="stat-block">
+        <div class="stat-number">633</div>
+        <div class="stat-label">Grandes Contribuintes</div>
+      </div>
+      <a class="btn-primary" href="grandes-contribuintes.html" style="align-self:flex-start; margin-top:6px;">
+        Ler reportagem completa &rarr;
+      </a>
+    </article>
+
+    <!-- 4b. Reforma em Foco — card claro -->
+    <article class="reform-card">
+      <span class="badge badge-gold">Reforma em Foco</span>
+      <h2>Novo IRPS</h2>
+      <div class="subtitle">Um único imposto sobre rendimento</div>
+      <p>Angola prepara a transição para um sistema que poderá unificar diferentes tributações sobre rendimentos individuais, com objectivo de simplificação e maior eficiência.</p>
+      <!-- Lista de benefícios -->
+      <ul class="check-list">
+        <li class="check-item">Tributação única</li>
+        <li class="check-item">Possibilidade de deduções</li>
+        <li class="check-item">Sem aumento previsto da carga fiscal</li>
+      </ul>
+      <a class="btn-secondary mt-auto" href="irps-reforma.html" style="align-self:flex-start;">
+        Entender o IRPS &rarr;
+      </a>
+    </article>
+
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ════════════════════════════════════════════
+       5. TRÊS ARTIGOS — ASY5 / Opinião / Angola-RDC
+       ════════════════════════════════════════════ -->
+  <div class="triple-row">
+
+    <!-- Artigo 1: ASY5 ganhos e desafios -->
+    <article class="article-card">
+      <span class="badge badge-blue">Modernização Digital</span>
+      <h3>ASY5: ganhos e desafios</h3>
+      <div class="asy5-table">
+        <!-- Coluna Ganhos -->
+        <div class="asy5-col">
+          <div class="asy5-col-title ganhos">Ganhos</div>
+          <ul>
+            <li><span class="ico">✅</span> Mais rapidez</li>
+            <li><span class="ico">✅</span> Acesso remoto</li>
+            <li><span class="ico">✅</span> Mais transparência</li>
+            <li><span class="ico">✅</span> Simplificação de processos</li>
+          </ul>
+        </div>
+        <!-- Coluna Desafios -->
+        <div class="asy5-col">
+          <div class="asy5-col-title desafios">Desafios</div>
+          <ul>
+            <li><span class="ico">⚠️</span> Internet</li>
+            <li><span class="ico">⚠️</span> Energia eléctrica</li>
+            <li><span class="ico">⚠️</span> Integração entre sistemas</li>
+            <li><span class="ico">⚠️</span> Capacitação contínua</li>
+          </ul>
+        </div>
+      </div>
+      <a class="btn-secondary mt-auto" href="asy5-bastonario.html" style="align-self:flex-start;">Explorar &rarr;</a>
+    </article>
+
+    <!-- Artigo 2: Opinião -->
+    <article class="article-card">
+      <span class="badge" style="background:#f0f4ff; color:#1246a0;">Opinião</span>
+      <h3>Modernização Tributária e Economia Informal</h3>
+      <p>A formalização é instrumento essencial para fortalecer a cidadania fiscal, aumentar receitas públicas e promover desenvolvimento económico sustentável.</p>
+      <a class="btn-secondary mt-auto" href="informalidade-angola.html" style="align-self:flex-start;">Continuar leitura &rarr;</a>
+    </article>
+
+    <!-- Artigo 3: Angola-RDC -->
+    <article class="article-card">
+      <span class="badge badge-green">Economia &amp; Comércio</span>
+      <h3>Angola–RDC</h3>
+      <p style="color:var(--blue-mid); font-family:var(--font-head); font-size:.82rem; font-weight:600; margin:-4px 0 4px;">
+        Formalização e segurança no comércio transfronteiriço
+      </p>
+      <p>AGT apresentou medidas para fortalecer controlo aduaneiro, reduzir informalidade e aumentar eficiência comercial entre os dois países.</p>
+      <!-- Placeholder visual para bandeiras -->
+      <div class="flag-placeholder" aria-label="Bandeiras de Angola e RDC">
+        <div class="flag-ao"></div>
+        <div class="flag-rdc"></div>
+      </div>
+      <a class="btn-secondary mt-auto" href="forum-rdc-angola.html" style="align-self:flex-start;">Ler mais &rarr;</a>
+    </article>
+
+    <!-- Artigo 4: Voz do Contribuinte -->
+    <article class="article-card">
+      <span class="badge" style="background:#ecfeff; color:#0891b2;">A Voz do Contribuinte</span>
+      <h3>Submissão Electrónica do Dossier de Preços de Transferência</h3>
+      <p>Contribuintes destacam melhorias operacionais, maior simplicidade e clareza nas sessões de esclarecimento promovidas pela AGT sobre o SIGT.</p>
+      <a class="btn-secondary mt-auto" href="voz-contribuinte.html" style="align-self:flex-start; border-color:#0891b2; color:#0891b2;">Ler testemunhos &rarr;</a>
+    </article>
+
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ════════════════════════════════════════════
+       6. SABIA QUE? + EDUCAÇÃO FINANCEIRA
+       ════════════════════════════════════════════ -->
+  <div class="info-row">
+
+    <!-- Caixa Sabia Que -->
+    <div class="info-card green-tint">
+      <div class="info-card-header">
+        <span>💡</span> Sabia que?
+      </div>
+      <h3>Imposto Industrial — Regime Geral (exercício 2025)</h3>
+      <p>A liquidação, pagamento definitivo e declaração anual do Imposto Industrial referente ao exercício fiscal de 2025 devem ser efectuados <strong>até ao dia 31 de Maio de 2026</strong> via Portal do Contribuinte.</p>
+      <a class="btn-secondary" href="imposto-industrial.html" style="align-self:flex-start; border-color:#17b26a; color:#17b26a;">
+        Saber mais &rarr;
+      </a>
+    </div>
+
+    <!-- Caixa Educação Financeira -->
+    <div class="info-card gold-tint">
+      <div class="info-card-header">
+        <span>📊</span> Educação Financeira
+      </div>
+      <h3>Sobra muito mês para tão pouco dinheiro?</h3>
+      <p>Por Fátima Sampaio Fernandes, Psicóloga da Saúde. Organização financeira, controlo de gastos e a regra 50/30/20 para melhorar o seu equilíbrio financeiro mensal.</p>
+      <a class="btn-secondary" href="psicologia-dinheiro.html" style="align-self:flex-start; border-color:#f0a500; color:#a06c00;">
+        Ver dicas &rarr;
+      </a>
+    </div>
+
+  </div>
+
+  <!-- ════════════════════════════════
+       6b. BOLETINS ESTATÍSTICOS — ABRIL 2026
+       ════════════════════════════════ -->
+  <section class="nl-section" style="background:var(--surface-2);">
+    <div class="nl-section-title">
+      <span>📈</span> Dados de Abril 2026
+    </div>
+    <div class="destaques-grid">
+
+      <div class="destaque-card">
+        <div class="destaque-icon">🗓️</div>
+        <h3>Boletim do IVA</h3>
+        <p><strong>19 152</strong> contribuintes no Regime Geral · <strong>11 897</strong> no Regime Simplificado · <strong>196 718</strong> no Regime de Exclusão.</p>
+        <a href="https://drive.google.com/file/d/1NNCNbYxrJBBYJtTmGUED4JVtmZjMxXhx/view?usp=drive_link" target="_blank">Saber mais &rarr;</a>
+      </div>
+
+      <div class="destaque-card">
+        <div class="destaque-icon">📋</div>
+        <h3>Declarações Aduaneiras</h3>
+        <p><strong>38 010</strong> declarações aduaneiras submetidas nos distintos regimes aduaneiros em Abril de 2026.</p>
+        <a href="https://drive.google.com/file/d/1NNCNbYxrJBBYJtTmGUED4JVtmZjMxXhx/view?usp=drive_link" target="_blank">Saber mais &rarr;</a>
+      </div>
+
+      <div class="destaque-card">
+        <div class="destaque-icon">🌐</div>
+        <h3>Comércio Externo</h3>
+        <p>Exportações de bens com aumento de <strong>25,2%</strong> face ao mesmo período de 2025, totalizando <strong>US$ 3 063 milhões</strong>.</p>
+        <a href="https://drive.google.com/file/d/1NNCNbYxrJBBYJtTmGUED4JVtmZjMxXhx/view?usp=drive_link" target="_blank">Saber mais &rarr;</a>
+      </div>
+
+      <div class="destaque-card">
+        <div class="destaque-icon">🛢️</div>
+        <h3>Boletim do Petróleo</h3>
+        <p>Crescente vaga de investimentos em refinação em África promete alterar profundamente a dinâmica do mercado petrolífero regional e global.</p>
+        <a href="https://drive.google.com/file/d/1NNCNbYxrJBBYJtTmGUED4JVtmZjMxXhx/view?usp=drive_link" target="_blank">Saber mais &rarr;</a>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ════════════════════════════════
+       7. SUBSCRIÇÃO — CTA final
+       ════════════════════════════════ -->
+  <section class="nl-subscribe">
+    <h2>Receba a Folha Tributária<br>na sua caixa de entrada!</h2>
+    <p>Subscreva a nossa newsletter e mantenha-se informado sobre todas as novidades da AGT.</p>
+    <div class="subscribe-form">
+      <input class="subscribe-input" type="email" placeholder="O seu e-mail" />
+      <button class="subscribe-btn" type="button">Subscrever</button>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════
+       8. FOOTER — links e contactos
+       ════════════════════════════════ -->
+  <footer>
+    <div class="nl-footer">
+
+      <!-- Coluna: Marca AGT -->
+      <div class="footer-brand footer-col">
+        <div class="brand-name">AGT</div>
+        <div class="brand-sub">Administração Geral<br>Tributária</div>
+      </div>
+
+      <!-- Coluna: Links Úteis -->
+      <div class="footer-col">
+        <div class="footer-col-title">Links Úteis</div>
+        <a href="https://portaldocontribuinte.minfin.gov.ao/" target="_blank"><span class="fi">→</span> Portal do Contribuinte</a>
+        <a href="https://www.agt.minfin.gov.ao" target="_blank"><span class="fi">→</span> Serviços Online</a>
+        <a href="https://drive.google.com/file/d/1NNCNbYxrJBBYJtTmGUED4JVtmZjMxXhx/view?usp=drive_link" target="_blank"><span class="fi">→</span> Resenha Legislativa 2026</a>
+        <a href="https://drive.google.com/file/d/1NNCNbYxrJBBYJtTmGUED4JVtmZjMxXhx/view?usp=drive_link" target="_blank"><span class="fi">→</span> Perguntas Frequentes</a>
+      </div>
+
+      <!-- Coluna: Contactos -->
+      <div class="footer-col">
+        <div class="footer-col-title">Contactos</div>
+        <p><span>📞</span> Central de Apoio: +244 923 16 70 10</p>
+        <p><span>💬</span> Justinho (WhatsApp): +244 923 16 70 11</p>
+        <p><span>✉️</span> apoio.agt@minfin.gov.ao</p>
+      </div>
+
+      <!-- Coluna: Redes Sociais -->
+      <div class="footer-col">
+        <div class="footer-col-title">Siga-nos</div>
+        <div class="social-row">
+          <a class="social-btn" href="https://portaldocontribuinte.minfin.gov.ao/" target="_blank" aria-label="Facebook">f</a>
+          <a class="social-btn" href="#" aria-label="LinkedIn" style="font-family:var(--font-head); font-size:.7rem; font-weight:700;">in</a>
+          <a class="social-btn" href="#" aria-label="YouTube">▶</a>
+        </div>
+        <p style="color:rgba(255,255,255,.45); font-size:.72rem; margin-top:10px;">www.agt.minfin.gov.ao</p>
+      </div>
+
+    </div>
+
+    <!-- Linha inferior do footer -->
+    <div class="nl-footer-bottom">
+      <p>© 2026 Administração Geral Tributária. Todos os direitos reservados.</p>
+      <p>Edição N.º 92 | Abril 2026 · Próxima edição: Maio 2026</p>
+    </div>
+  </footer>
+
+</div><!-- /nl-wrapper -->
+
+</body>
+</html>

@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IA no Combate à Fraude Fiscal | Folha Tributária N.º 92</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── VARIÁVEIS ─────────────────────────────── */
+    :root {
+      --blue-deep:   #0a1f44;
+      --blue-mid:    #1246a0;
+      --blue-light:  #1e5fcb;
+      --blue-glow:   #2478ff;
+      --gold:        #f0a500;
+      --gold-dim:    #c48200;
+      --green:       #17b26a;
+      --surface:     #ffffff;
+      --surface-2:   #f0f4fb;
+      --surface-3:   #e5ecf8;
+      --text-p:      #0d1b38;
+      --text-m:      #4a5a78;
+      --border:      #d6deef;
+      --r-sm: 6px; --r-md: 14px; --r-lg: 22px;
+      --font-h: 'Sora', sans-serif;
+      --font-b: 'Source Serif 4', serif;
+      --max: 780px;
+      --sh: 0 4px 24px rgba(10,31,68,.10);
+      --sh-lg: 0 12px 48px rgba(10,31,68,.16);
+    }
+
+    /* ─── RESET ─────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body {
+      background: var(--surface-2);
+      color: var(--text-p);
+      font-family: var(--font-b);
+      line-height: 1.7;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: var(--blue-light); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ─── WRAPPER ────────────────────────────────── */
+    .page {
+      max-width: var(--max);
+      margin: 0 auto;
+      background: var(--surface);
+      box-shadow: var(--sh-lg);
+    }
+
+    /* ─── NAV BAR ────────────────────────────────── */
+    .nav {
+      background: var(--blue-deep);
+      padding: 14px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,.75);
+      font-family: var(--font-h);
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      transition: color .2s;
+    }
+    .nav-back:hover { color: #fff; text-decoration: none; }
+    .nav-back svg { opacity: .7; }
+    .nav-brand {
+      font-family: var(--font-h);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.45);
+    }
+    .nav-brand span { color: var(--gold); }
+
+    /* ─── HERO DO ARTIGO ─────────────────────────── */
+    .art-hero {
+      background: linear-gradient(150deg, #050f26 0%, #0a1f44 45%, #0d2d6b 100%);
+      padding: 60px 40px 56px;
+      position: relative;
+      overflow: hidden;
+    }
+    /* grade de pontos decorativa */
+    .art-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle, rgba(36,120,255,.18) 1px, transparent 1px);
+      background-size: 28px 28px;
+      pointer-events: none;
+    }
+    /* brilho circular */
+    .art-hero::after {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 420px; height: 420px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(36,120,255,.22) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .art-hero-inner { position: relative; z-index: 1; }
+
+    .art-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(36,120,255,.15);
+      border: 1px solid rgba(36,120,255,.35);
+      border-radius: 40px;
+      padding: 5px 16px;
+      font-family: var(--font-h);
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+      color: #7eb8ff;
+      margin-bottom: 24px;
+    }
+    .art-kicker-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: #7eb8ff;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: .5; transform: scale(.7); }
+    }
+
+    .art-hero h1 {
+      font-family: var(--font-h);
+      font-size: clamp(1.85rem, 5vw, 3rem);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.12;
+      margin-bottom: 20px;
+      max-width: 560px;
+    }
+    .art-hero h1 em {
+      font-style: normal;
+      color: var(--gold);
+    }
+
+    .art-hero-lead {
+      color: rgba(255,255,255,.72);
+      font-size: 1.05rem;
+      max-width: 520px;
+      margin-bottom: 36px;
+      line-height: 1.65;
+    }
+
+    .art-meta {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding-top: 28px;
+      border-top: 1px solid rgba(255,255,255,.1);
+    }
+    .art-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-h);
+      font-size: .73rem;
+      font-weight: 600;
+      letter-spacing: .05em;
+      color: rgba(255,255,255,.5);
+    }
+    .art-meta-item strong { color: rgba(255,255,255,.85); }
+    .art-meta-sep {
+      width: 1px; height: 20px;
+      background: rgba(255,255,255,.15);
+    }
+
+    /* ─── LINHA DE CITAÇÃO HERO ──────────────────── */
+    .hero-quote {
+      background: rgba(240,165,0,.08);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 var(--r-sm) var(--r-sm) 0;
+      padding: 18px 22px;
+      margin: 32px 0 0;
+      color: rgba(255,255,255,.8);
+      font-size: .95rem;
+      font-style: italic;
+      line-height: 1.6;
+      max-width: 540px;
+    }
+    .hero-quote cite {
+      display: block;
+      margin-top: 10px;
+      font-style: normal;
+      font-family: var(--font-h);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+
+    /* ─── CORPO DO ARTIGO ────────────────────────── */
+    .art-body {
+      padding: 48px 40px 56px;
+    }
+
+    /* ─── BARRA DE ESTATÍSTICAS ──────────────────── */
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border-radius: var(--r-md);
+      overflow: hidden;
+      margin-bottom: 48px;
+      box-shadow: var(--sh);
+    }
+    .stat-cell {
+      background: var(--surface);
+      padding: 24px 20px;
+      text-align: center;
+    }
+    .stat-cell-num {
+      font-family: var(--font-h);
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--blue-mid);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .stat-cell-num.gold { color: var(--gold-dim); }
+    .stat-cell-num.green { color: #0f9254; }
+    .stat-cell-label {
+      font-family: var(--font-h);
+      font-size: .68rem;
+      font-weight: 600;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      color: var(--text-m);
+      line-height: 1.4;
+    }
+
+    /* ─── TIPOGRAFIA DO CORPO ────────────────────── */
+    .art-body h2 {
+      font-family: var(--font-h);
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--text-p);
+      margin: 44px 0 14px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--surface-3);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .art-body h2 .h2-icon {
+      width: 30px; height: 30px;
+      border-radius: var(--r-sm);
+      background: var(--blue-mid);
+      display: flex; align-items: center; justify-content: center;
+      font-size: .85rem;
+      color: #fff;
+      flex-shrink: 0;
+    }
+    .art-body h2:first-child { margin-top: 0; }
+
+    .art-body p {
+      font-size: .97rem;
+      color: var(--text-p);
+      margin-bottom: 18px;
+      line-height: 1.75;
+    }
+    .art-body p:last-child { margin-bottom: 0; }
+
+    /* ─── CAIXA DE DESTAQUE / PULLQUOTE ─────────── */
+    .pullquote {
+      background: linear-gradient(135deg, var(--blue-deep) 0%, #0d2d6b 100%);
+      border-radius: var(--r-lg);
+      padding: 32px 36px;
+      margin: 36px 0;
+      color: rgba(255,255,255,.85);
+      font-size: 1.05rem;
+      font-style: italic;
+      line-height: 1.65;
+      position: relative;
+      overflow: hidden;
+    }
+    .pullquote::before {
+      content: '"';
+      position: absolute;
+      top: -20px; left: 20px;
+      font-family: var(--font-h);
+      font-size: 9rem;
+      font-weight: 800;
+      color: rgba(255,255,255,.05);
+      line-height: 1;
+      pointer-events: none;
+    }
+    .pullquote p {
+      color: rgba(255,255,255,.88);
+      font-size: 1rem;
+      position: relative;
+      z-index: 1;
+      margin-bottom: 14px !important;
+    }
+    .pullquote cite {
+      display: block;
+      font-style: normal;
+      font-family: var(--font-h);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      color: var(--gold);
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ─── CAIXA INFO / HIGHLIGHT BOX ────────────── */
+    .info-box {
+      border-radius: var(--r-md);
+      padding: 24px 26px;
+      margin: 32px 0;
+    }
+    .info-box.blue {
+      background: #eef4ff;
+      border: 1px solid #c0d4f7;
+    }
+    .info-box.gold {
+      background: #fff8e6;
+      border: 1px solid #f5d98a;
+    }
+    .info-box-title {
+      font-family: var(--font-h);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .info-box.blue  .info-box-title { color: var(--blue-mid); }
+    .info-box.gold  .info-box-title { color: var(--gold-dim); }
+    .info-box p {
+      font-size: .88rem !important;
+      line-height: 1.65;
+      color: var(--text-m) !important;
+      margin-bottom: 0 !important;
+    }
+
+    /* ─── LISTA COM ÍCONES ───────────────────────── */
+    .icon-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+      margin: 20px 0 28px;
+    }
+    .icon-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 13px;
+      font-size: .93rem;
+      color: var(--text-p);
+      line-height: 1.55;
+    }
+    .icon-list li .il-icon {
+      flex-shrink: 0;
+      width: 28px; height: 28px;
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .85rem;
+      margin-top: 1px;
+    }
+    .icon-list li .il-icon.blue  { background: #ddeaff; }
+    .icon-list li .il-icon.green { background: #d6f5e8; }
+    .icon-list li .il-icon.gold  { background: #fff0cc; }
+
+    /* ─── CARDS DE PROCESSO ──────────────────────── */
+    .process-steps {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 28px 0;
+    }
+    @media (max-width: 520px) {
+      .process-steps { grid-template-columns: 1fr; }
+    }
+    .process-step {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      padding: 20px 18px;
+      position: relative;
+    }
+    .process-step-num {
+      position: absolute;
+      top: -10px; left: 16px;
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      background: var(--blue-mid);
+      color: #fff;
+      font-family: var(--font-h);
+      font-size: .65rem;
+      font-weight: 800;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .process-step h4 {
+      font-family: var(--font-h);
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--blue-mid);
+      margin-bottom: 6px;
+    }
+    .process-step p {
+      font-size: .8rem !important;
+      color: var(--text-m) !important;
+      margin: 0 !important;
+      line-height: 1.5;
+    }
+
+    /* ─── DIVIDER DECORATIVO ─────────────────────── */
+    .art-divider {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 40px 0;
+    }
+    .art-divider::before, .art-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+    .art-divider-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--blue-mid);
+      opacity: .4;
+    }
+
+    /* ─── SECÇÃO CONTEXTO (tom de fundo) ─────────── */
+    .context-block {
+      background: var(--surface-3);
+      border-radius: var(--r-lg);
+      padding: 32px 32px;
+      margin: 32px 0;
+    }
+    .context-block h3 {
+      font-family: var(--font-h);
+      font-size: .9rem;
+      font-weight: 800;
+      color: var(--blue-deep);
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+
+    /* ─── RODAPÉ DO ARTIGO ───────────────────────── */
+    .art-footer {
+      background: var(--blue-deep);
+      padding: 32px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .art-footer-brand {
+      font-family: var(--font-h);
+      color: rgba(255,255,255,.45);
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .art-footer-brand span { color: rgba(255,255,255,.8); }
+    .art-footer-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .art-footer-links a {
+      color: rgba(255,255,255,.5);
+      font-family: var(--font-h);
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .05em;
+      transition: color .2s;
+    }
+    .art-footer-links a:hover { color: #fff; text-decoration: none; }
+
+    /* ─── BOTÃO VOLTAR (FIM DE ARTIGO) ──────────── */
+    .back-btn-wrap {
+      padding: 36px 40px;
+      background: var(--surface-2);
+      display: flex;
+      justify-content: center;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      background: var(--blue-mid);
+      color: #fff;
+      font-family: var(--font-h);
+      font-size: .82rem;
+      font-weight: 700;
+      padding: 13px 28px;
+      border-radius: 40px;
+      transition: background .2s, transform .15s;
+    }
+    .back-btn:hover { background: var(--blue-light); transform: translateY(-1px); text-decoration: none; }
+
+    /* ─── RESPONSIVO ─────────────────────────────── */
+    @media (max-width: 600px) {
+      .art-hero  { padding: 44px 24px 40px; }
+      .art-body  { padding: 36px 24px 44px; }
+      .stats-bar { grid-template-columns: 1fr 1fr; }
+      .stats-bar .stat-cell:last-child { grid-column: 1 / -1; }
+      .art-footer { flex-direction: column; gap: 12px; padding: 28px 24px; }
+      .back-btn-wrap { padding: 28px 24px; }
+      .pullquote { padding: 24px 22px; }
+      .context-block { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- ══════════════════════════════
+       NAV — barra de topo
+       ══════════════════════════════ -->
+  <nav class="nav">
+    <a class="nav-back" href="index.html">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+        <path d="M9 2L4 7L9 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Voltar à Newsletter
+    </a>
+    <div class="nav-brand">Folha Tributária · <span>Edição N.º 92</span></div>
+  </nav>
+
+  <!-- ══════════════════════════════
+       HERO DO ARTIGO
+       ══════════════════════════════ -->
+  <header class="art-hero">
+    <div class="art-hero-inner">
+
+      <div class="art-kicker">
+        <span class="art-kicker-dot"></span>
+        Modernização Tecnológica · Edição N.º 92 | Abril 2026
+      </div>
+
+      <h1>Inteligência Artificial<br>Reforça o Combate<br>à <em>Fraude Fiscal</em></h1>
+
+      <p class="art-hero-lead">
+        A AGT implementa mecanismos de inteligência artificial na análise de irregularidades fiscais, reforça a autonomia decisória da nova estrutura dos Grandes Contribuintes e afirma o seu compromisso com a transparência e a integridade institucional.
+      </p>
+
+      <div class="hero-quote">
+        "A AGT está comprometida em garantir que, no seio dos seus funcionários, não haja casos de fraude que os envolvam. Se houver casos de corrupção, estes serão, como é habitual nesta instituição, comunicados às autoridades competentes."
+        <cite>José Leiria — Presidente do Conselho de Administração da AGT</cite>
+      </div>
+
+      <div class="art-meta" style="margin-top: 32px;">
+        <div class="art-meta-item"><strong>Fonte</strong> Encontro Sectorial com Grandes Contribuintes, Abril 2026</div>
+        <div class="art-meta-sep"></div>
+        <div class="art-meta-item"><strong>Tema</strong> Tecnologia · Fiscalização · Anti-fraude</div>
+        <div class="art-meta-sep"></div>
+        <div class="art-meta-item"><strong>Edição</strong> N.º 92 · Abril 2026</div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════
+       CORPO DO ARTIGO
+       ══════════════════════════════ -->
+  <main class="art-body">
+
+    <!-- Barra de estatísticas -->
+    <div class="stats-bar">
+      <div class="stat-cell">
+        <div class="stat-cell-num">633</div>
+        <div class="stat-cell-label">Grandes Contribuintes<br>na nova lista</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-cell-num gold">90%</div>
+        <div class="stat-cell-label">da receita tributária<br>proveniente deste segmento</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-cell-num green">2024</div>
+        <div class="stat-cell-label">exercício económico<br>fiscalizado com IA</div>
+      </div>
+    </div>
+
+    <!-- Secção 1 -->
+    <h2><span class="h2-icon">🤖</span> IA como instrumento de fiscalização</h2>
+
+    <p>
+      No encerramento do I Encontro Sectorial com os Grandes Contribuintes de 2026, o Presidente do Conselho de Administração da AGT, José Leiria, sublinhou os avanços tecnológicos mais recentes implementados pela instituição, com especial destaque para o uso de inteligência artificial na análise e verificação de irregularidades fiscais.
+    </p>
+
+    <p>
+      Segundo o responsável, a fiscalização do exercício económico de 2024 foi conduzida com recurso a mecanismos de IA, marcando uma mudança de paradigma na forma como a AGT identifica desvios e activa processos de auditoria. A notificação para o <strong>Direito de Audição Prévia (DAP)</strong> passou a incorporar a detecção automática de desvios no sistema, permitindo uma triagem mais rápida, objectiva e menos sujeita a erro humano.
+    </p>
+
+    <div class="info-box blue">
+      <div class="info-box-title">💡 O que é o Direito de Audição Prévia (DAP)?</div>
+      <p>O DAP é um mecanismo legal que garante ao contribuinte o direito de ser ouvido antes de qualquer decisão administrativa que possa afectar os seus interesses. A AGT utiliza-o como etapa formal antes da aplicação de correcções fiscais. Com a IA, a triagem de casos suspeitos para DAP passou a ser feita de forma automática, com base em padrões de desvio identificados nos dados declarados.</p>
+    </div>
+
+    <p>
+      Todos os processos que, à luz do DAP, apresentaram <strong>desagravamentos suspeitos</strong> estão actualmente a ser analisados pela <strong>Direcção de Serviços Anti-fraude</strong> e pelo <strong>Gabinete de Auditoria Interna e Gestão de Risco da AGT</strong>. Este escrutínio reforçado visa assegurar que eventuais irregularidades não passem despercebidas, independentemente da sua natureza ou escala.
+    </p>
+
+    <div class="art-divider"><div class="art-divider-dot"></div><div class="art-divider-dot"></div><div class="art-divider-dot"></div></div>
+
+    <!-- Secção 2 -->
+    <h2><span class="h2-icon">🏛️</span> Nova estrutura e maior autonomia decisória</h2>
+
+    <p>
+      José Leiria destacou igualmente que integrar a Repartição Fiscal dos Grandes Contribuintes constitui um <em>privilégio</em>, dada a importância estratégica deste segmento para a economia nacional. A nova estrutura da <strong>Direcção dos Grandes Contribuintes (DGC)</strong> redefine o modelo de gestão e acompanhamento, permitindo maior autonomia decisória às repartições fiscais especializadas.
+    </p>
+
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="process-step-num">1</div>
+        <h4>Chefe da 2.ª RFGC</h4>
+        <p>Passará a conduzir as comissões de fixação da matéria colectável do sector petrolífero.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-step-num">2</div>
+        <h4>Director da DGC</h4>
+        <p>Responsável pela decisão dos recursos hierárquicos dos contribuintes e pela presidência da comissão de revisão da matéria colectável.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-step-num">3</div>
+        <h4>1.ª RFGC</h4>
+        <p>Acompanha 50,4% dos Grandes Contribuintes: sector financeiro, comércio e serviços, industrial e fundos públicos.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-step-num">4</div>
+        <h4>2.ª RFGC</h4>
+        <p>Acompanha 48,6% dos contribuintes: sector petrolífero (113) e sector mineiro (195).</p>
+      </div>
+    </div>
+
+    <p>
+      Esta redistribuição de competências visa não apenas agilizar a tomada de decisões, mas também aproximar a administração tributária das especificidades de cada sector económico, assegurando uma fiscalização mais especializada e eficaz.
+    </p>
+
+    <div class="art-divider"><div class="art-divider-dot"></div><div class="art-divider-dot"></div><div class="art-divider-dot"></div></div>
+
+    <!-- Secção 3 — Mapeamento de processos -->
+    <h2><span class="h2-icon">🗺️</span> Mapeamento de processos e tecnologia anti-fraude</h2>
+
+    <p>
+      Para além da inteligência artificial na fiscalização, a AGT tem investido no mapeamento sistematizado dos seus processos internos. Esta iniciativa tem um duplo objectivo: por um lado, aumentar a eficiência operacional e reduzir redundâncias; por outro, identificar pontos de vulnerabilidade que possam ser explorados em esquemas de corrupção ou fraude interna.
+    </p>
+
+    <ul class="icon-list">
+      <li>
+        <span class="il-icon blue">🔍</span>
+        <span><strong>Detecção automática de desvios</strong> — Algoritmos de IA analisam as declarações fiscais e identificam padrões atípicos que indiciam irregularidades, substituindo a triagem manual e reduzindo o risco de discricionariedade.</span>
+      </li>
+      <li>
+        <span class="il-icon gold">⚡</span>
+        <span><strong>Activação do DAP baseada em dados</strong> — As notificações para audição prévia são geradas automaticamente sempre que o sistema detecta desvios significativos, garantindo uniformidade e rastreabilidade no processo.</span>
+      </li>
+      <li>
+        <span class="il-icon green">🛡️</span>
+        <span><strong>Análise pela Direcção Anti-fraude</strong> — Os casos com desagravamentos suspeitos são encaminhados para a Direcção de Serviços Anti-fraude e para o Gabinete de Auditoria Interna, assegurando uma investigação aprofundada e independente.</span>
+      </li>
+      <li>
+        <span class="il-icon blue">📊</span>
+        <span><strong>Auditoria interna reforçada</strong> — O Gabinete de Auditoria Interna e Gestão de Risco da AGT actua em articulação com os mecanismos de IA para garantir a integridade dos processos e proteger as receitas públicas.</span>
+      </li>
+    </ul>
+
+    <!-- Pullquote principal -->
+    <div class="pullquote">
+      <p>"Sempre que tiverem acesso a informações relacionadas com detenções na AGT, não pensem que os impostos entregues pelos contribuintes não estão a ser protegidos. É precisamente o contrário. É um sinal claro de que estamos comprometidos em garantir que não se brinque com receitas que pertencem a todos os cidadãos."</p>
+      <cite>José Leiria — Presidente do Conselho de Administração da AGT</cite>
+    </div>
+
+    <div class="art-divider"><div class="art-divider-dot"></div><div class="art-divider-dot"></div><div class="art-divider-dot"></div></div>
+
+    <!-- Secção 4 — Compromisso institucional -->
+    <h2><span class="h2-icon">⚖️</span> Integridade institucional como prioridade</h2>
+
+    <p>
+      O responsável máximo da AGT foi claro ao afirmar que a instituição não tolera casos de fraude no seio dos seus funcionários. Qualquer ocorrência de corrupção identificada no interior da AGT é comunicada às autoridades competentes, numa postura que o Presidente do Conselho de Administração considera um sinal inequívoco de compromisso com a transparência e a responsabilidade pública.
+    </p>
+
+    <p>
+      Esta afirmação surge num contexto em que a AGT tem vindo a intensificar os mecanismos de controlo interno, nomeadamente através da utilização de IA para monitorizar o próprio exercício das funções dos seus quadros, garantindo que os processos de fiscalização são conduzidos com rigor e sem interferências externas indevidas.
+    </p>
+
+    <div class="context-block">
+      <h3>Contexto — I Encontro Sectorial dos Grandes Contribuintes 2026</h3>
+      <p style="font-size:.9rem; color:var(--text-m); margin-bottom:12px;">
+        O I Encontro Sectorial com os Grandes Contribuintes de 2026 realizou-se no dia 13 de Abril, em Luanda. O evento reuniu os 633 maiores contribuintes do país, distribuídos pelos sectores petrolífero, mineiro, financeiro, industrial, comércio e serviços, e fundos públicos.
+      </p>
+      <p style="font-size:.9rem; color:var(--text-m); margin-bottom:12px;">
+        A iniciativa teve como objectivo central sensibilizar os Grandes Contribuintes sobre o seu papel estratégico na consolidação da reforma tributária, na promoção da conformidade fiscal e no fortalecimento do desenvolvimento económico nacional.
+      </p>
+      <p style="font-size:.9rem; color:var(--text-m);">
+        Os 633 Grandes Contribuintes representam cerca de <strong>90% da receita tributária</strong> arrecadada em Angola, o que sublinha a importância estratégica do segmento e justifica o nível de acompanhamento especializado agora previsto na nova estrutura da DGC.
+      </p>
+    </div>
+
+    <div class="info-box gold">
+      <div class="info-box-title">📌 Para saber mais</div>
+      <p>A lista actualizada dos Grandes Contribuintes foi aprovada pelo <strong>Despacho n.º 1889/26, de 4 de Março</strong>, ao abrigo do novo Estatuto Orgânico da AGT. Para informações adicionais sobre obrigações fiscais, consulte o Portal do Contribuinte em <a href="https://portaldocontribuinte.minfin.gov.ao/" target="_blank" style="color:var(--gold-dim); font-weight:600;">portaldocontribuinte.minfin.gov.ao</a> ou contacte o Assistente Virtual Justinho via WhatsApp: <strong>+244 923 16 70 11</strong>.</p>
+    </div>
+
+  </main>
+
+  <!-- ══════════════════════════════
+       BOTÃO VOLTAR
+       ══════════════════════════════ -->
+  <div class="back-btn-wrap">
+    <a class="back-btn" href="index.html">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+        <path d="M9 2L4 7L9 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Voltar à Newsletter
+    </a>
+  </div>
+
+  <!-- ══════════════════════════════
+       RODAPÉ
+       ══════════════════════════════ -->
+  <footer class="art-footer">
+    <div class="art-footer-brand">
+      <span>AGT</span> — Administração Geral Tributária · Folha Tributária Edição N.º 92 · Abril 2026
+    </div>
+    <div class="art-footer-links">
+      <a href="https://www.agt.minfin.gov.ao" target="_blank">agt.minfin.gov.ao</a>
+      <a href="https://portaldocontribuinte.minfin.gov.ao/" target="_blank">Portal do Contribuinte</a>
+      <a href="mailto:apoio.agt@minfin.gov.ao">apoio.agt@minfin.gov.ao</a>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>

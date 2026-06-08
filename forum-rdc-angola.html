@@ -1,0 +1,137 @@
+<!DOCTYPE html><html lang="pt"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>Fórum RDC-Angola | Folha Tributária N.º 92</title><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet"/>
+<style>
+:root{--bd:#0a1f44;--bm:#1246a0;--bl:#1e5fcb;--go:#f0a500;--gd:#c48200;--gn:#17b26a;--sf:#fff;--s2:#f0f4fb;--s3:#e5ecf8;--tp:#0d1b38;--tm:#4a5a78;--br:#d6deef;--fh:'Sora',sans-serif;--fb:'Source Serif 4',serif;--mx:780px;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}html{font-size:16px;scroll-behavior:smooth;}body{background:var(--s2);color:var(--tp);font-family:var(--fb);line-height:1.7;}a{color:var(--bl);text-decoration:none;}a:hover{text-decoration:underline;}
+.page{max-width:var(--mx);margin:0 auto;background:var(--sf);box-shadow:0 12px 48px rgba(10,31,68,.16);}
+.nav{background:var(--bd);padding:14px 32px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
+.nav-back{display:inline-flex;align-items:center;gap:8px;color:rgba(255,255,255,.75);font-family:var(--fh);font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;}
+.nav-back:hover{color:#fff;text-decoration:none;}
+.nav-brand{font-family:var(--fh);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45);}
+.nav-brand span{color:var(--go);}
+.hero{background:linear-gradient(150deg,#020b1a 0%,#081830 45%,#0a2a18 100%);padding:60px 40px 56px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(240,165,0,.1) 1px,transparent 1px);background-size:28px 28px;pointer-events:none;}
+.hero-inner{position:relative;z-index:1;}
+.kicker{display:inline-flex;align-items:center;gap:8px;background:rgba(240,165,0,.1);border:1px solid rgba(240,165,0,.3);border-radius:40px;padding:5px 16px;font-family:var(--fh);font-size:.7rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#ffd06b;margin-bottom:24px;}
+.kicker-dot{width:6px;height:6px;border-radius:50%;background:#ffd06b;animation:pulse 2s ease-in-out infinite;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.4;}}
+.hero h1{font-family:var(--fh);font-size:clamp(1.85rem,5vw,2.9rem);font-weight:800;color:#fff;line-height:1.1;margin-bottom:20px;max-width:560px;}
+.hero h1 em{font-style:normal;color:var(--go);}
+.hero-lead{color:rgba(255,255,255,.72);font-size:1.05rem;max-width:520px;margin-bottom:36px;}
+.flags{display:flex;gap:16px;align-items:center;margin-bottom:28px;}
+.flag{width:52px;height:34px;border-radius:4px;overflow:hidden;flex-shrink:0;}
+.flag-ao{background:linear-gradient(180deg,#cc0000 50%,#000 50%);}
+.flag-rdc{background:linear-gradient(135deg,#007fff 33%,#f7d618 33%,#f7d618 66%,#ce1126 66%);}
+.flag-sep{width:1px;height:34px;background:rgba(255,255,255,.2);}
+.flag-label{font-family:var(--fh);font-size:.72rem;font-weight:600;color:rgba(255,255,255,.6);}
+.hero-quote{background:rgba(240,165,0,.08);border-left:3px solid var(--go);border-radius:0 6px 6px 0;padding:18px 22px;color:rgba(255,255,255,.8);font-size:.95rem;font-style:italic;max-width:540px;}
+.hero-quote cite{display:block;margin-top:10px;font-style:normal;font-family:var(--fh);font-size:.72rem;font-weight:700;letter-spacing:.06em;color:var(--go);text-transform:uppercase;}
+.art-meta{display:flex;align-items:center;flex-wrap:wrap;gap:20px;padding-top:28px;border-top:1px solid rgba(255,255,255,.1);margin-top:32px;}
+.art-meta-item{font-family:var(--fh);font-size:.73rem;font-weight:600;color:rgba(255,255,255,.5);}
+.art-meta-item strong{color:rgba(255,255,255,.85);}
+.art-meta-sep{width:1px;height:20px;background:rgba(255,255,255,.15);}
+.body{padding:48px 40px 56px;}
+.pilares-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:28px 0;}
+.pilar{background:var(--s2);border:1px solid var(--br);border-radius:14px;padding:22px 18px;text-align:center;}
+.pilar-icon{font-size:2rem;margin-bottom:10px;}
+.pilar-title{font-family:var(--fh);font-size:.82rem;font-weight:700;color:var(--bm);margin-bottom:6px;}
+.pilar p{font-size:.8rem;color:var(--tm);margin:0;}
+h2{font-family:var(--fh);font-size:1.25rem;font-weight:800;color:var(--tp);margin:44px 0 14px;padding-bottom:10px;border-bottom:2px solid var(--s3);display:flex;align-items:center;gap:10px;}
+h2:first-child{margin-top:0;}
+.h2i{width:30px;height:30px;border-radius:6px;background:var(--bm);display:flex;align-items:center;justify-content:center;font-size:.85rem;color:#fff;flex-shrink:0;}
+p{font-size:.97rem;color:var(--tp);margin-bottom:18px;line-height:1.75;}
+.medidas-list{list-style:none;display:flex;flex-direction:column;gap:12px;margin:20px 0 28px;}
+.medidas-list li{display:flex;align-items:flex-start;gap:12px;font-size:.93rem;color:var(--tp);line-height:1.55;}
+.medidas-list li .ico{flex-shrink:0;width:28px;height:28px;border-radius:8px;background:#ddeaff;display:flex;align-items:center;justify-content:center;font-size:.85rem;margin-top:1px;}
+.pullquote{background:linear-gradient(135deg,var(--bd) 0%,#0d2d6b 100%);border-radius:22px;padding:32px 36px;margin:36px 0;position:relative;overflow:hidden;}
+.pullquote::before{content:'"';position:absolute;top:-20px;left:20px;font-family:var(--fh);font-size:9rem;font-weight:800;color:rgba(255,255,255,.05);line-height:1;}
+.pullquote p{color:rgba(255,255,255,.88);font-size:1rem;position:relative;z-index:1;margin-bottom:14px;}
+.pullquote cite{display:block;font-style:normal;font-family:var(--fh);font-size:.72rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--go);position:relative;z-index:1;}
+.info-box{border-radius:14px;padding:24px 26px;margin:32px 0;}
+.info-box.green{background:#edfaf4;border:1px solid #b2e8cf;}
+.ibt{font-family:var(--fh);font-size:.72rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:7px;}
+.info-box.green .ibt{color:#0f9254;}
+.info-box p{font-size:.88rem!important;color:var(--tm)!important;margin-bottom:0!important;}
+.delegacao-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:24px 0;}
+.d-card{background:var(--s2);border:1px solid var(--br);border-radius:12px;padding:16px;text-align:center;}
+.d-name{font-family:var(--fh);font-size:.82rem;font-weight:700;color:var(--tp);margin-bottom:3px;}
+.d-role{font-family:var(--fh);font-size:.68rem;font-weight:600;color:var(--tm);text-transform:uppercase;letter-spacing:.05em;}
+.divider{display:flex;align-items:center;gap:16px;margin:40px 0;}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:var(--br);}
+.divider span{width:8px;height:8px;border-radius:50%;background:var(--go);opacity:.4;}
+.art-footer{background:var(--bd);padding:28px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;}
+.art-footer-brand{font-family:var(--fh);color:rgba(255,255,255,.45);font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;}
+.art-footer-brand span{color:rgba(255,255,255,.8);}
+.art-footer-links a{color:rgba(255,255,255,.5);font-family:var(--fh);font-size:.72rem;font-weight:600;margin-left:20px;}
+.art-footer-links a:hover{color:#fff;text-decoration:none;}
+.back-btn-wrap{padding:32px 40px;background:var(--s2);display:flex;justify-content:center;}
+.back-btn{display:inline-flex;align-items:center;gap:9px;background:var(--bm);color:#fff;font-family:var(--fh);font-size:.82rem;font-weight:700;padding:13px 28px;border-radius:40px;transition:background .2s;}
+.back-btn:hover{background:var(--bl);text-decoration:none;}
+@media(max-width:600px){.hero,.body,.art-footer,.back-btn-wrap{padding-left:24px;padding-right:24px;}.pilares-grid,.delegacao-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="page">
+  <nav class="nav">
+    <a class="nav-back" href="index.html"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M9 2L4 7L9 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Voltar à Newsletter</a>
+    <div class="nav-brand">Folha Tributária · <span>Edição N.º 92</span></div>
+  </nav>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="kicker"><span class="kicker-dot"></span>Economia &amp; Comércio · Abril 2026</div>
+      <h1>AGT defende<br><em>Comércio Transfronteiriço</em><br>no Fórum RDC-Angola</h1>
+      <p class="hero-lead">A AGT participou na 3.ª edição do Fórum Económico Angola–RDC, em Kinshasa, apresentando medidas para fortalecer o controlo aduaneiro, reduzir a informalidade e formalizar o comércio transfronteiriço entre os dois países.</p>
+      <div class="flags">
+        <div class="flag flag-ao"></div>
+        <div class="flag-label">Angola</div>
+        <div class="flag-sep"></div>
+        <div class="flag flag-rdc"></div>
+        <div class="flag-label">República Democrática do Congo</div>
+      </div>
+      <div class="art-meta">
+        <div class="art-meta-item"><strong>Data</strong> 1 e 2 de Abril de 2026, Kinshasa</div>
+        <div class="art-meta-sep"></div>
+        <div class="art-meta-item"><strong>Evento</strong> 3.ª Edição do Fórum Económico Angola–RDC</div>
+        <div class="art-meta-sep"></div>
+        <div class="art-meta-item"><strong>Lema</strong> Integração Sub-Regional e Desenvolvimento do Comércio Transfronteiriço</div>
+      </div>
+    </div>
+  </header>
+  <main class="body">
+    <h2><span class="h2i">🌍</span>O Fórum e a delegação angolana</h2>
+    <p>A Administração Geral Tributária (AGT) participou, nos dias 1 e 2 de Abril, na 3.ª edição do Fórum Económico Angola–República Democrática do Congo (RDC), realizado em Kinshasa, sob o lema <em>"Integração Sub-Regional e Desenvolvimento do Comércio Transfronteiriço"</em>.</p>
+    <p>O encontro reuniu representantes governamentais, especialistas, operadores económicos e empresários dos dois países, com o objectivo de consolidar mecanismos de cooperação económica bilateral, estimular o investimento privado e promover soluções conjuntas para os desafios associados ao comércio fronteiriço.</p>
+    <div class="delegacao-grid">
+      <div class="d-card"><div class="d-name">Ottoniel dos Santos</div><div class="d-role">Secretário de Estado — Finanças e Tesouro</div></div>
+      <div class="d-card"><div class="d-name">Pedro Marques</div><div class="d-role">Administrador da AGT</div></div>
+      <div class="d-card"><div class="d-name">Francisco Sivone</div><div class="d-role">Director dos Serviços Aduaneiros</div></div>
+    </div>
+    <div class="divider"><span></span><span></span><span></span></div>
+    <h2><span class="h2i">🏗️</span>Os três pilares da estratégia da AGT</h2>
+    <p>Durante a sua intervenção, o administrador da AGT, Pedro Marques, apresentou o tema <em>"Protecção das Economias Formais através da Formalização e Segurança do Comércio Transfronteiriço"</em>, destacando que a consolidação de economias mais resilientes e competitivas passa pela transformação gradual do comércio informal em circuitos comerciais regulados, seguros e fiscalmente enquadrados.</p>
+    <div class="pilares-grid">
+      <div class="pilar"><div class="pilar-icon">📋</div><div class="pilar-title">Formalização</div><p>Formalização das actividades comerciais transfronteiriças, integrando os operadores nos circuitos económicos regulados.</p></div>
+      <div class="pilar"><div class="pilar-icon">🛡️</div><div class="pilar-title">Segurança Aduaneira</div><p>Reforço da segurança e controlo aduaneiro nas fronteiras para combater o contrabando e a evasão fiscal.</p></div>
+      <div class="pilar"><div class="pilar-icon">⚡</div><div class="pilar-title">Facilitação do Comércio</div><p>Facilitação do comércio lícito através da simplificação de procedimentos e modernização dos sistemas aduaneiros.</p></div>
+    </div>
+    <div class="divider"><span></span><span></span><span></span></div>
+    <h2><span class="h2i">📊</span>Desafios no comércio bilateral</h2>
+    <p>Segundo o administrador da AGT, apesar dos progressos registados nos últimos anos, uma parcela significativa das trocas comerciais entre Angola e a RDC continua a ocorrer fora dos canais formais, contribuindo para práticas como o contrabando, a evasão fiscal, a circulação de mercadorias sem controlo sanitário e a concorrência desleal entre operadores económicos.</p>
+    <p>Os dados apresentados durante o fórum indicam que as trocas comerciais entre os dois países têm registado crescimento progressivo, com destaque para o aumento do volume de exportações angolanas para a RDC, impulsionado pelos sectores <strong>alimentar, industrial e de bens de consumo</strong>. Ainda assim, persistem constrangimentos relacionados com a harmonização de procedimentos aduaneiros, limitações logísticas e insuficiências infra-estruturais nas zonas fronteiriças.</p>
+    <div class="divider"><span></span><span></span><span></span></div>
+    <h2><span class="h2i">🗺️</span>O papel estratégico do Posto Fronteiriço do Luvo</h2>
+    <p>O administrador destacou igualmente o papel estratégico do <strong>Posto Fronteiriço do Luvo</strong>, na província do Zaire, considerado uma das principais portas de entrada e saída de mercadorias entre os dois países. O posto tem beneficiado de processos de modernização e reforço operacional para responder ao aumento do fluxo comercial e melhorar os níveis de controlo, segurança e celeridade no desembaraço aduaneiro.</p>
+    <h2><span class="h2i">🔧</span>Medidas apresentadas pela AGT</h2>
+    <ul class="medidas-list">
+      <li><span class="ico">💻</span>Digitalização e interoperabilidade dos sistemas aduaneiros</li>
+      <li><span class="ico">📡</span>Implementação de tecnologias de controlo não intrusivo (scanners e selos electrónicos)</li>
+      <li><span class="ico">🛒</span>Criação de canais simplificados para pequenos comerciantes</li>
+      <li><span class="ico">💱</span>Instalação de pontos oficiais de câmbio nas zonas fronteiriças</li>
+      <li><span class="ico">🎓</span>Reforço da capacitação técnica dos quadros aduaneiros</li>
+      <li><span class="ico">🚔</span>Criação de equipas especializadas de combate ao contrabando e redes de comércio ilícito</li>
+    </ul>
+    <div class="info-box green"><div class="ibt">💡 Contexto do Fórum</div><p>A 3.ª edição do Fórum Económico Angola–RDC contou ainda com a participação da primeira-ministra da RDC, Judith Suminwa Tuluka, do vice-primeiro-ministro congolês, Daniel Mukoko Samba, e do ministro da Indústria e Comércio de Angola, Rui de Oliveira, entre outros responsáveis governamentais e empresariais dos dois países.</p></div>
+  </main>
+  <div class="back-btn-wrap"><a class="back-btn" href="index.html"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M9 2L4 7L9 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Voltar à Newsletter</a></div>
+  <footer class="art-footer"><div class="art-footer-brand"><span>AGT</span> — Folha Tributária · Edição N.º 92 · Abril 2026</div><div class="art-footer-links"><a href="https://www.agt.minfin.gov.ao" target="_blank">agt.minfin.gov.ao</a><a href="https://portaldocontribuinte.minfin.gov.ao/" target="_blank">Portal do Contribuinte</a></div></footer>
+</div>
+</body></html>

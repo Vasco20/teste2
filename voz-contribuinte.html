@@ -1,0 +1,109 @@
+<!DOCTYPE html><html lang="pt"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>A Voz do Contribuinte | Folha Tributária N.º 92</title><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet"/>
+<style>
+:root{--bd:#0a1f44;--bm:#1246a0;--bl:#1e5fcb;--go:#f0a500;--gd:#c48200;--gn:#17b26a;--tl:#0891b2;--sf:#fff;--s2:#f0f4fb;--s3:#e5ecf8;--tp:#0d1b38;--tm:#4a5a78;--br:#d6deef;--fh:'Sora',sans-serif;--fb:'Source Serif 4',serif;--mx:780px;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}html{font-size:16px;scroll-behavior:smooth;}body{background:var(--s2);color:var(--tp);font-family:var(--fb);line-height:1.7;}a{color:var(--bl);text-decoration:none;}a:hover{text-decoration:underline;}
+.page{max-width:var(--mx);margin:0 auto;background:var(--sf);box-shadow:0 12px 48px rgba(10,31,68,.16);}
+.nav{background:var(--bd);padding:14px 32px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
+.nav-back{display:inline-flex;align-items:center;gap:8px;color:rgba(255,255,255,.75);font-family:var(--fh);font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;}
+.nav-back:hover{color:#fff;text-decoration:none;}
+.nav-brand{font-family:var(--fh);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45);}
+.nav-brand span{color:var(--go);}
+.hero{background:linear-gradient(150deg,#002a35 0%,#00404f 45%,#005566 100%);padding:60px 40px 56px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(8,145,178,.15) 1px,transparent 1px);background-size:26px 26px;pointer-events:none;}
+.hero-inner{position:relative;z-index:1;}
+.kicker{display:inline-flex;align-items:center;gap:8px;background:rgba(8,145,178,.12);border:1px solid rgba(8,145,178,.35);border-radius:40px;padding:5px 16px;font-family:var(--fh);font-size:.7rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#67e8f9;margin-bottom:24px;}
+.kicker-dot{width:6px;height:6px;border-radius:50%;background:#67e8f9;animation:pulse 2s ease-in-out infinite;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.4;}}
+.hero h1{font-family:var(--fh);font-size:clamp(1.85rem,5vw,2.9rem);font-weight:800;color:#fff;line-height:1.1;margin-bottom:20px;max-width:560px;}
+.hero h1 em{font-style:normal;color:#67e8f9;}
+.hero-lead{color:rgba(255,255,255,.72);font-size:1.05rem;max-width:520px;margin-bottom:28px;}
+.art-meta{display:flex;align-items:center;flex-wrap:wrap;gap:20px;padding-top:28px;border-top:1px solid rgba(255,255,255,.1);margin-top:12px;}
+.art-meta-item{font-family:var(--fh);font-size:.73rem;font-weight:600;color:rgba(255,255,255,.5);}
+.art-meta-item strong{color:rgba(255,255,255,.85);}
+.art-meta-sep{width:1px;height:20px;background:rgba(255,255,255,.15);}
+.body{padding:48px 40px 56px;}
+.context-box{background:var(--s3);border-radius:14px;padding:24px 26px;margin-bottom:44px;}
+.context-box p{font-size:.9rem;color:var(--tm);margin:0;}
+.context-box strong{color:var(--bm);}
+h2{font-family:var(--fh);font-size:1.25rem;font-weight:800;color:var(--tp);margin:44px 0 14px;padding-bottom:10px;border-bottom:2px solid var(--s3);display:flex;align-items:center;gap:10px;}
+h2:first-child{margin-top:0;}
+.h2i{width:30px;height:30px;border-radius:6px;background:var(--tl);display:flex;align-items:center;justify-content:center;font-size:.85rem;color:#fff;flex-shrink:0;}
+p{font-size:.97rem;color:var(--tp);margin-bottom:18px;line-height:1.75;}
+.voice-card{display:grid;grid-template-columns:80px 1fr;gap:20px;background:var(--sf);border:1px solid var(--br);border-radius:16px;padding:24px;margin:20px 0;box-shadow:0 2px 12px rgba(10,31,68,.07);}
+.vc-avatar{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--tl),var(--bm));display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-size:1.4rem;font-weight:800;color:#fff;flex-shrink:0;}
+.vc-body{}
+.vc-name{font-family:var(--fh);font-size:.95rem;font-weight:700;color:var(--tp);}
+.vc-company{font-family:var(--fh);font-size:.72rem;font-weight:700;color:var(--tl);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px;}
+.vc-body p{font-size:.88rem!important;color:var(--tp)!important;margin-bottom:0!important;}
+.info-box{border-radius:14px;padding:24px 26px;margin:32px 0;}
+.info-box.teal{background:#ecfeff;border:1px solid #a5f3fc;}
+.ibt{font-family:var(--fh);font-size:.72rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:7px;}
+.info-box.teal .ibt{color:var(--tl);}
+.info-box p{font-size:.88rem!important;color:var(--tm)!important;margin-bottom:0!important;}
+.divider{display:flex;align-items:center;gap:16px;margin:40px 0;}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:var(--br);}
+.divider span{width:8px;height:8px;border-radius:50%;background:var(--tl);opacity:.4;}
+.art-footer{background:var(--bd);padding:28px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;}
+.art-footer-brand{font-family:var(--fh);color:rgba(255,255,255,.45);font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;}
+.art-footer-brand span{color:rgba(255,255,255,.8);}
+.art-footer-links a{color:rgba(255,255,255,.5);font-family:var(--fh);font-size:.72rem;font-weight:600;margin-left:20px;}
+.art-footer-links a:hover{color:#fff;text-decoration:none;}
+.back-btn-wrap{padding:32px 40px;background:var(--s2);display:flex;justify-content:center;}
+.back-btn{display:inline-flex;align-items:center;gap:9px;background:var(--tl);color:#fff;font-family:var(--fh);font-size:.82rem;font-weight:700;padding:13px 28px;border-radius:40px;transition:background .2s;}
+.back-btn:hover{background:#0e7490;text-decoration:none;}
+@media(max-width:600px){.hero,.body,.art-footer,.back-btn-wrap{padding-left:24px;padding-right:24px;}.voice-card{grid-template-columns:1fr;}.vc-avatar{width:52px;height:52px;}}
+</style>
+</head>
+<body>
+<div class="page">
+  <nav class="nav">
+    <a class="nav-back" href="index.html"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M9 2L4 7L9 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Voltar à Newsletter</a>
+    <div class="nav-brand">Folha Tributária · <span>Edição N.º 92</span></div>
+  </nav>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="kicker"><span class="kicker-dot"></span>A Voz do Contribuinte · Abril 2026</div>
+      <h1>Contribuintes destacam<br>vantagens da <em>Submissão<br>Electrónica</em></h1>
+      <p class="hero-lead">No âmbito da implementação dos procedimentos de submissão electrónica do Dossier de Preços de Transferência no SIGT, a Folha Tributária ouviu contribuintes que participaram nas sessões de esclarecimento promovidas pela AGT.</p>
+      <div class="art-meta">
+        <div class="art-meta-item"><strong>Sessões</strong> 27 de Abril a 5 de Maio de 2026</div>
+        <div class="art-meta-sep"></div>
+        <div class="art-meta-item"><strong>Destinatários</strong> 227 Grandes Contribuintes</div>
+        <div class="art-meta-sep"></div>
+        <div class="art-meta-item"><strong>Tema</strong> Dossier de Preços de Transferência · SIGT</div>
+      </div>
+    </div>
+  </header>
+  <main class="body">
+    <div class="context-box"><p>No âmbito da implementação dos procedimentos de submissão electrónica do <strong>Dossier de Preços de Transferência</strong> no Sistema Integrado de Gestão Tributária (SIGT), a AGT realizou sessões de esclarecimento entre 27 de Abril e 5 de Maio de 2026, dirigidas a <strong>227 grandes contribuintes</strong>. Os entrevistados destacaram as vantagens da digitalização, sublinhando melhorias operacionais no portal, maior simplicidade na submissão documental, redução de dúvidas e maior clareza quanto aos critérios de obrigatoriedade previstos na legislação tributária.</p></div>
+    <h2><span class="h2i">🗣️</span>O que dizem os contribuintes</h2>
+    <div class="voice-card">
+      <div class="vc-avatar">AC</div>
+      <div class="vc-body">
+        <div class="vc-name">Acácio Calucango</div>
+        <div class="vc-company">Clínica Sagrada Esperança</div>
+        <p>Para Acácio Calucango, é importante que os contribuintes compreendam melhor quando e por que motivo uma entidade está obrigada a submeter, por via electrónica, o Dossier de Preços de Transferência. Destacou as melhorias verificadas no portal electrónico, sobretudo no que respeita ao alargamento da capacidade dos ficheiros e à automatização da identificação do Código de Actividade Económica (CAE), factores que vieram simplificar significativamente o processo de submissão. Considerou ainda que a migração do procedimento físico para o formato electrónico representa uma evolução positiva, por tornar o processo mais simples, prático e acessível.</p>
+      </div>
+    </div>
+    <div class="voice-card">
+      <div class="vc-avatar">AB</div>
+      <div class="vc-body">
+        <div class="vc-name">Abel Campos</div>
+        <div class="vc-company">Banco Comercial do Huambo</div>
+        <p>Para Abel Campos, a submissão electrónica do Dossier de Preços de Transferência representa um contributo para a melhoria da qualidade da informação reportada à AGT, pois permite que os contribuintes não apenas cumpram as suas obrigações fiscais, mas o façam com maior rigor e qualidade. Salientou que os procedimentos de submissão no SIGT foram apresentados de forma clara e compreensível, o que permitiu ampliar conhecimentos sobre o funcionamento do portal e sobre os critérios de elegibilidade das empresas obrigadas à submissão do dossier, nomeadamente no que respeita ao limite anual de proveitos operacionais previsto na legislação.</p>
+      </div>
+    </div>
+    <div class="voice-card">
+      <div class="vc-avatar">CP</div>
+      <div class="vc-body">
+        <div class="vc-name">Cláudio Pep</div>
+        <div class="vc-company">Barco Trading</div>
+        <p>Cláudio Pep considerou que a submissão electrónica do Dossier de Preços de Transferência constitui uma importante ferramenta de conformidade tributária, permitindo às empresas cumprir as exigências legais e reduzir riscos de incumprimento fiscal e penalizações. Explicou que o dossier tem como principal objectivo assegurar que as transacções entre empresas do mesmo grupo sejam realizadas em condições compatíveis com a realidade do mercado, de maneira a evitar distorções nos preços praticados. Destacou ainda alguns desafios na identificação de empresas comparáveis em determinados sectores de actividade, que obriga ao recurso a referências regionais e internacionais.</p>
+      </div>
+    </div>
+    <div class="info-box teal"><div class="ibt">📌 O que é o Dossier de Preços de Transferência?</div><p>O Dossier de Preços de Transferência é um documento obrigatório para determinadas empresas, que comprova que as transacções realizadas com entidades relacionadas (do mesmo grupo económico) foram efectuadas em condições de mercado. A sua submissão passou a ser feita electronicamente através do SIGT — Sistema Integrado de Gestão Tributária da AGT.</p></div>
+  </main>
+  <div class="back-btn-wrap"><a class="back-btn" href="index.html"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M9 2L4 7L9 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Voltar à Newsletter</a></div>
+  <footer class="art-footer"><div class="art-footer-brand"><span>AGT</span> — Folha Tributária · Edição N.º 92 · Abril 2026</div><div class="art-footer-links"><a href="https://www.agt.minfin.gov.ao" target="_blank">agt.minfin.gov.ao</a><a href="https://portaldocontribuinte.minfin.gov.ao/" target="_blank">Portal do Contribuinte</a></div></footer>
+</div>
+</body></html>

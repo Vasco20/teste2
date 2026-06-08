@@ -1,0 +1,155 @@
+<!DOCTYPE html><html lang="pt"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>IRPS — Reforma Fiscal | Folha Tributária N.º 92</title><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet"/>
+<style>
+:root{--bd:#0a1f44;--bm:#1246a0;--bl:#1e5fcb;--go:#f0a500;--gd:#c48200;--gn:#17b26a;--sf:#fff;--s2:#f0f4fb;--s3:#e5ecf8;--tp:#0d1b38;--tm:#4a5a78;--br:#d6deef;--fh:'Sora',sans-serif;--fb:'Source Serif 4',serif;--mx:780px;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}html{font-size:16px;scroll-behavior:smooth;}body{background:var(--s2);color:var(--tp);font-family:var(--fb);line-height:1.7;}a{color:var(--bl);text-decoration:none;}a:hover{text-decoration:underline;}
+.page{max-width:var(--mx);margin:0 auto;background:var(--sf);box-shadow:0 12px 48px rgba(10,31,68,.16);}
+.nav{background:var(--bd);padding:14px 32px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
+.nav-back{display:inline-flex;align-items:center;gap:8px;color:rgba(255,255,255,.75);font-family:var(--fh);font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;}
+.nav-back:hover{color:#fff;text-decoration:none;}
+.nav-brand{font-family:var(--fh);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45);}
+.nav-brand span{color:var(--go);}
+.hero{background:linear-gradient(150deg,#0d1f0a 0%,#162e10 45%,#1a3a12 100%);padding:60px 40px 56px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(23,178,106,.12) 1px,transparent 1px);background-size:26px 26px;pointer-events:none;}
+.hero-inner{position:relative;z-index:1;}
+.kicker{display:inline-flex;align-items:center;gap:8px;background:rgba(23,178,106,.1);border:1px solid rgba(23,178,106,.3);border-radius:40px;padding:5px 16px;font-family:var(--fh);font-size:.7rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#6ee7b7;margin-bottom:24px;}
+.kicker-dot{width:6px;height:6px;border-radius:50%;background:#6ee7b7;animation:pulse 2s ease-in-out infinite;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.4;}}
+.hero h1{font-family:var(--fh);font-size:clamp(1.85rem,5vw,2.9rem);font-weight:800;color:#fff;line-height:1.1;margin-bottom:20px;max-width:560px;}
+.hero h1 em{font-style:normal;color:#6ee7b7;}
+.hero-lead{color:rgba(255,255,255,.72);font-size:1.05rem;max-width:520px;margin-bottom:36px;}
+.entrevistado{display:flex;align-items:center;gap:16px;background:rgba(255,255,255,.07);border-radius:14px;padding:18px 20px;margin-bottom:28px;}
+.ent-avatar{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--gn),var(--bm));display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-size:1.2rem;font-weight:800;color:#fff;flex-shrink:0;}
+.ent-name{font-family:var(--fh);font-size:.88rem;font-weight:700;color:#fff;}
+.ent-role{font-family:var(--fh);font-size:.7rem;font-weight:600;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.06em;margin-top:3px;}
+.art-meta{display:flex;align-items:center;flex-wrap:wrap;gap:20px;padding-top:28px;border-top:1px solid rgba(255,255,255,.1);}
+.art-meta-item{font-family:var(--fh);font-size:.73rem;font-weight:600;color:rgba(255,255,255,.5);}
+.art-meta-item strong{color:rgba(255,255,255,.85);}
+.art-meta-sep{width:1px;height:20px;background:rgba(255,255,255,.15);}
+.body{padding:48px 40px 56px;}
+.comparacao{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--br);border-radius:14px;overflow:hidden;margin:28px 0;}
+.comp-col{background:var(--sf);padding:24px 20px;}
+.comp-col.atual{background:var(--s2);}
+.comp-col-title{font-family:var(--fh);font-size:.72rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;margin-bottom:14px;}
+.comp-col.atual .comp-col-title{color:var(--tm);}
+.comp-col.irps .comp-col-title{color:var(--bm);}
+.comp-col ul{list-style:none;display:flex;flex-direction:column;gap:8px;}
+.comp-col li{font-size:.85rem;color:var(--tp);display:flex;align-items:flex-start;gap:8px;}
+.qa-block{border-left:3px solid var(--gn);padding:0 0 0 20px;margin:28px 0;}
+.qa-q{font-family:var(--fh);font-size:.88rem;font-weight:700;color:var(--bm);margin-bottom:8px;}
+.qa-a{font-size:.93rem;color:var(--tp);line-height:1.7;}
+h2{font-family:var(--fh);font-size:1.25rem;font-weight:800;color:var(--tp);margin:44px 0 14px;padding-bottom:10px;border-bottom:2px solid var(--s3);display:flex;align-items:center;gap:10px;}
+h2:first-child{margin-top:0;}
+.h2i{width:30px;height:30px;border-radius:6px;background:var(--gn);display:flex;align-items:center;justify-content:center;font-size:.85rem;color:#fff;flex-shrink:0;}
+p{font-size:.97rem;color:var(--tp);margin-bottom:18px;line-height:1.75;}
+.check-list{list-style:none;display:flex;flex-direction:column;gap:12px;margin:16px 0 28px;}
+.check-list li{display:flex;align-items:flex-start;gap:12px;font-size:.93rem;color:var(--tp);}
+.check-list li::before{content:'✓';flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--gn);color:#fff;font-size:.7rem;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:2px;}
+.info-box{border-radius:14px;padding:24px 26px;margin:32px 0;}
+.info-box.gold{background:#fff8e6;border:1px solid #f5d98a;}
+.info-box.green{background:#edfaf4;border:1px solid #b2e8cf;}
+.ibt{font-family:var(--fh);font-size:.72rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:7px;}
+.info-box.gold .ibt{color:var(--gd);}
+.info-box.green .ibt{color:#0f9254;}
+.info-box p{font-size:.88rem!important;color:var(--tm)!important;margin-bottom:0!important;}
+.divider{display:flex;align-items:center;gap:16px;margin:40px 0;}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:var(--br);}
+.divider span{width:8px;height:8px;border-radius:50%;background:var(--gn);opacity:.4;}
+.art-footer{background:var(--bd);padding:28px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;}
+.art-footer-brand{font-family:var(--fh);color:rgba(255,255,255,.45);font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;}
+.art-footer-brand span{color:rgba(255,255,255,.8);}
+.art-footer-links a{color:rgba(255,255,255,.5);font-family:var(--fh);font-size:.72rem;font-weight:600;margin-left:20px;}
+.art-footer-links a:hover{color:#fff;text-decoration:none;}
+.back-btn-wrap{padding:32px 40px;background:var(--s2);display:flex;justify-content:center;}
+.back-btn{display:inline-flex;align-items:center;gap:9px;background:var(--gn);color:#fff;font-family:var(--fh);font-size:.82rem;font-weight:700;padding:13px 28px;border-radius:40px;transition:background .2s;}
+.back-btn:hover{background:#0f9254;text-decoration:none;}
+@media(max-width:600px){.hero,.body,.art-footer,.back-btn-wrap{padding-left:24px;padding-right:24px;}.comparacao{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="page">
+  <nav class="nav">
+    <a class="nav-back" href="index.html"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M9 2L4 7L9 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Voltar à Newsletter</a>
+    <div class="nav-brand">Folha Tributária · <span>Edição N.º 92</span></div>
+  </nav>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="kicker"><span class="kicker-dot"></span>Reforma em Foco · Abril 2026</div>
+      <h1>Angola prepara o <em>IRPS</em>:<br>Imposto sobre Rendimento<br>das Pessoas Singulares</h1>
+      <p class="hero-lead">A implementação do futuro Imposto sobre o Rendimento das Pessoas Singulares (IRPS) poderá marcar uma das mais profundas transformações do sistema fiscal angolano, unificando vários impostos sobre o rendimento num único modelo mais simples e eficiente.</p>
+      <div class="entrevistado">
+        <div class="ent-avatar">AV</div>
+        <div><div class="ent-name">Anderson Vitangaiala</div><div class="ent-role">Chefe do Departamento de Reforma Estrutural e Pareceres Técnicos — AGT</div></div>
+      </div>
+      <div class="art-meta">
+        <div class="art-meta-item"><strong>Formato</strong> Entrevista à Folha Tributária</div>
+        <div class="art-meta-sep"></div>
+        <div class="art-meta-item"><strong>Tema</strong> IRPS · Reforma Fiscal · Tributação do Rendimento</div>
+        <div class="art-meta-sep"></div>
+        <div class="art-meta-item"><strong>Edição</strong> N.º 92 · Abril 2026</div>
+      </div>
+    </div>
+  </header>
+  <main class="body">
+    <h2><span class="h2i">📝</span>O que é o IRPS?</h2>
+    <p>O IRPS visa substituir o actual modelo de tributação cedular dos rendimentos das pessoas singulares, que actualmente ocorre de forma fragmentada, com diferentes impostos para cada tipo de rendimento. O novo modelo caracteriza-se pela <strong>tributação única dos rendimentos</strong> obtidos por uma pessoa singular residente fiscal em Angola, respeitando o mínimo de existência.</p>
+    <div class="comparacao">
+      <div class="comp-col atual">
+        <div class="comp-col-title">⚠️ Sistema Actual (Cedular)</div>
+        <ul>
+          <li>📄 Imposto sobre Rendimentos de Trabalho (IRT)</li>
+          <li>💰 Imposto sobre a Aplicação de Capitais (IAC)</li>
+          <li>🏠 Imposto Predial (IP) — vertente de rendas</li>
+          <li>❌ Dispersão das obrigações fiscais</li>
+          <li>❌ Maior complexidade administrativa</li>
+        </ul>
+      </div>
+      <div class="comp-col irps">
+        <div class="comp-col-title">✅ Com o IRPS (Único)</div>
+        <ul>
+          <li>🎯 Imposto único sobre todos os rendimentos</li>
+          <li>📊 Tabela geral de taxas progressivas</li>
+          <li>💡 Possibilidade de dedução de despesas</li>
+          <li>✅ Maior simplificação</li>
+          <li>✅ Sem aumento previsto da carga fiscal</li>
+        </ul>
+      </div>
+    </div>
+    <div class="divider"><span></span><span></span><span></span></div>
+    <h2><span class="h2i">💬</span>Perguntas e respostas com Anderson Vitangaiala</h2>
+    <div class="qa-block">
+      <div class="qa-q">O que muda na prática?</div>
+      <div class="qa-a">Vários impostos que actualmente incidem sobre diferentes rendimentos das pessoas singulares serão unificados num único imposto. Isso poderá permitir maior simplificação da tributação e a possibilidade de deduzir determinadas despesas à colecta, conforme os limites e previsões que venham a ser definidos no Orçamento Geral do Estado.</div>
+    </div>
+    <div class="qa-block">
+      <div class="qa-q">O que muda para um trabalhador por conta de outrem?</div>
+      <div class="qa-a">O modelo de tributação do trabalhador dependente poderá manter a mesma mecânica actual, uma vez que as obrigações tributárias continuarão sob responsabilidade da entidade patronal, enquanto substituto tributário. No entanto, em situações em que o trabalhador obtenha rendimentos de outras categorias, poderá englobar esses rendimentos e beneficiar da dedução de determinadas despesas.</div>
+    </div>
+    <div class="qa-block">
+      <div class="qa-q">E para quem possui múltiplas fontes de rendimento?</div>
+      <div class="qa-a">Nas situações em que o contribuinte aufira rendimentos provenientes de diferentes fontes — como salário, rendas ou actividade comercial em nome individual — poderá haver o englobamento desses rendimentos, sendo a tributação feita com base numa tabela geral de taxas progressivas. Além disso, poderá existir a possibilidade de deduzir determinadas despesas.</div>
+    </div>
+    <div class="qa-block">
+      <div class="qa-q">O IRPS vai aumentar a carga fiscal?</div>
+      <div class="qa-a">Um dos principais objectivos da reforma é manter o actual quadro de taxas e evitar o aumento da carga fiscal das pessoas e das famílias.</div>
+    </div>
+    <div class="qa-block">
+      <div class="qa-q">Os contribuintes devem preparar-se já?</div>
+      <div class="qa-a">Sim. É importante que os contribuintes conheçam o desenho do modelo de tributação que poderá ser implementado com o IRPS e compreendam a forma como as obrigações fiscais poderão decorrer. A proposta de lei esteve em consulta pública, permitindo que parceiros sociais, ordens profissionais, sindicatos e a sociedade em geral analisassem detalhadamente os objectivos e o desenho normativo da reforma.</div>
+    </div>
+    <div class="divider"><span></span><span></span><span></span></div>
+    <h2><span class="h2i">✅</span>Principais benefícios esperados do IRPS</h2>
+    <ul class="check-list">
+      <li>Tributação única e simplificada dos rendimentos individuais</li>
+      <li>Possibilidade de englobamento de múltiplas fontes de rendimento</li>
+      <li>Dedução de determinadas despesas à colecta</li>
+      <li>Respeito pelo mínimo de existência (rendimento mínimo não tributado)</li>
+      <li>Sem aumento previsto da carga fiscal</li>
+      <li>Modernização do sistema fiscal angolano</li>
+    </ul>
+    <div class="info-box gold"><div class="ibt">📌 Mensagem aos contribuintes</div><p>"O sistema fiscal angolano encontra-se numa fase de evolução em várias dimensões, com destaque para as recentes alterações legislativas nos modelos de tributação e para o esforço de modernização tecnológica, factores que contribuem para um sistema fiscal mais moderno e justo. Espera-se dos contribuintes uma postura de ética-cidadã." — Anderson Vitangaiala</p></div>
+    <div class="info-box green"><div class="ibt">💡 Contactos AGT</div><p>Para mais informações: <a href="https://portaldocontribuinte.minfin.gov.ao/" target="_blank" style="color:#0f9254;font-weight:600;">portaldocontribuinte.minfin.gov.ao</a> · Central: <strong>+244 923 16 70 10</strong> · Justinho (WhatsApp): <strong>+244 923 16 70 11</strong></p></div>
+  </main>
+  <div class="back-btn-wrap"><a class="back-btn" href="index.html"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M9 2L4 7L9 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Voltar à Newsletter</a></div>
+  <footer class="art-footer"><div class="art-footer-brand"><span>AGT</span> — Folha Tributária · Edição N.º 92 · Abril 2026</div><div class="art-footer-links"><a href="https://www.agt.minfin.gov.ao" target="_blank">agt.minfin.gov.ao</a><a href="https://portaldocontribuinte.minfin.gov.ao/" target="_blank">Portal do Contribuinte</a></div></footer>
+</div>
+</body></html>
