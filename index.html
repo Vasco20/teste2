@@ -34,7 +34,7 @@
       --shadow-md:   0 6px 24px rgba(10,31,68,.12);
       --font-head:   'Sora', sans-serif;
       --font-body:   'Source Serif 4', serif;
-      --max-w:       900px;
+      --max-w:       680px;
     }
 
     /* =============================================
@@ -217,7 +217,7 @@
       background: var(--border);
     }
 
-    /* Grid de 5 cards — 2 colunas em mobile, 3 em tablet, 5 em desktop */
+    /* Grid de 4 cards — 2 colunas em mobile, 4 em desktop */
     .destaques-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -225,9 +225,6 @@
     }
     @media (min-width: 540px) {
       .destaques-grid { grid-template-columns: repeat(3, 1fr); }
-    }
-    @media (min-width: 750px) {
-      .destaques-grid { grid-template-columns: repeat(5, 1fr); }
     }
     .destaque-card {
       background: var(--surface-2);
@@ -407,9 +404,6 @@
       gap: 16px;
     }
     @media (min-width: 480px) {
-      .triple-row { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (min-width: 720px) {
       .triple-row { grid-template-columns: repeat(4, 1fr); }
     }
     .article-card {
@@ -702,8 +696,11 @@
     <!-- Logótipo AGT (canto superior direito) -->
     <div class="nl-hero-brand">
       <!-- Ícone AGT simplificado em SVG -->
-    <img classe="svg" src="image/agt-logo.webp" alt="logo">
-    
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="18" cy="18" r="17" stroke="rgba(255,255,255,.4)" stroke-width="1.5"/>
+        <path d="M18 6 L18 30 M6 18 L30 18 M9 9 L27 27 M27 9 L9 27" stroke="rgba(255,255,255,.7)" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="18" cy="18" r="4" fill="white" fill-opacity=".9"/>
+      </svg>
       <div class="brand-name">AGT</div>
       <div class="brand-sub">Administração Geral<br>Tributária</div>
     </div>
